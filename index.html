@@ -1,44 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
 </head>
 
 <body>
-	<div class="container">
-		<div class="header">
-      <h2><a href="https://www.naver.com/">https://www.naver.com/</a></h2>
-			<h2><a href="ncmop://close" target="deeplink">ncmop://close</a></h2>
-			<h2><a href="ncmop://custom_value?values=testvalue" target="deeplink">ncmop://custom_value?values=testvalue</a></h2>
-			<h2><a href="ncmop://custom_value?values=testvalue&wv_close=yes" target="deeplink">ncmop://custom_value?values=testvalue&wv_close=yes</a></h2>
-			<h2><a href="ncmop://custom_value?values=testvalue&campaign_close_all=yes" target="deeplink">ncmop://custom_value?values=testvalue&campaign_close_all=yes</a></h2>
-			<h2><a href="ncmop://custom_value?values=testvalue&wv_close=yes&campaign_close_all=yes" target="deeplink">ncmop://custom_value?values=testvalue&wv_close=yes&campaign_close_all=yes</a></h2>
-			<h2><a href="emptyhtml">/KeyCodeWebTest/emptyhtml</a></h2>
-			<h2><a href="emptyfile">/KeyCodeWebTest/emptyfile</a></h2>
-			<h1>KeyCodeTest</h1>
-			<h1 id="keycodeText">keyCode</h1>
-		</div>
-	</div>
-	<script>
-		const body = document.querySelector('body');
-		var keyCodeText = document.getElementById("keycodeText");
-		body.onkeydown = function(e) {
-			keyCodeText.innerText = e.keyCode;
-			if(e.keyCode == 112)
-			{
-				console.log("112 Detected");
-				window.location.href = "ncmop://dont_show_again";
-			}
-			else if(e.keyCode == 27)
-			{
-				console.log("27 Detected");
-				window.location.href = "ncmop://close";
-			}
-		}
-	</script>
+    <div class="container">
+        <div class="header">
+            <h2><a href="https://www.naver.com/">https://www.naver.com/</a></h2>
+            <h2><a href="ncmop://close" target="deeplink">ncmop://close</a></h2>
+            <h2><a href="ncmop://custom_value?values=testvalue" target="deeplink">ncmop://custom_value?values=testvalue</a></h2>
+            <h2><a href="ncmop://custom_value?values=testvalue&wv_close=yes" target="deeplink">ncmop://custom_value?values=testvalue&wv_close=yes</a></h2>
+            <h2><a href="ncmop://custom_value?values=testvalue&campaign_close_all=yes" target="deeplink">ncmop://custom_value?values=testvalue&campaign_close_all=yes</a></h2>
+            <h2><a href="ncmop://custom_value?values=testvalue&wv_close=yes&campaign_close_all=yes" target="deeplink">ncmop://custom_value?values=testvalue&wv_close=yes&campaign_close_all=yes</a></h2>
+            <h2><a href="ncmop://alert?title=alert_title&message=alert_message" target="deeplink">ncmop://alert?title=alert_title&message=alert_message</a></h2>
+            <h2><a href="emptyhtml">/KeyCodeWebTest/emptyhtml</a></h2>
+            <h2><a href="emptyfile">/KeyCodeWebTest/emptyfile</a></h2>
+            <h1>KeyCodeTest</h1>
+            <h1 id="keycodeText">keyCode</h1>
+        </div>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+        var keyCodeText = document.getElementById("keycodeText");
+        body.onkeydown = function(e) {
+            keyCodeText.innerText = e.keyCode;
+            if(e.keyCode == 112)
+            {
+                console.log("112 Detected");
+                window.location.href = "ncmop://dont_show_again";
+            }
+            else if(e.keyCode == 27)
+            {
+                console.log("27 Detected");
+                window.location.href = "ncmop://close";
+            }
+        }
+    </script>
 </body>
-
 </html>
- 
