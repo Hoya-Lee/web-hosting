@@ -3,11 +3,23 @@
 
 <head>
     <meta charset="utf-8" />
+	<style>
+		#webview {
+			opacity: 0.5;
+			background-color: rgba(255, 255, 255, 0.5);
+			width: 80%;
+			height: 400px;
+			margin: 50px auto;
+			padding: 20px;
+			border: 1px solid black;
+		}
+	</style>
 </head>
 
 <body>
     <div class="container">
         <div class="header">
+            <div id="webview">
             <h2><a href="https://www.naver.com/">https://www.naver.com/</a></h2>
             <h2><a href="https://ncmop?wv_close=yes">https://ncmop?wv_close=yes</a></h2>
             <h2><a href="ncmop://close" target="deeplink">ncmop://close</a></h2>
@@ -21,6 +33,7 @@
             <h2><a href="emptyfile">/KeyCodeWebTest/emptyfile</a></h2>
             <h1>KeyCodeTest</h1>
             <h1 id="keycodeText">keyCode</h1>
+            </div>
         </div>
     </div>
     <script>
